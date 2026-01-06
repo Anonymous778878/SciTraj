@@ -1,0 +1,142 @@
+{
+  "normal": {
+    "tfidf_kmeans": {
+      "silhouette_score": -0.07006309181451797,
+      "calinski_harabasz_score": 11.660346984863281,
+      "num_clusters": 20,
+      "noise_ratio": 0.0,
+      "temporal_coherence": 0.524583405528824
+    },
+    "scibert_kmeans": {
+      "silhouette_score": 0.05562807247042656,
+      "calinski_harabasz_score": 54.02460861206055,
+      "num_clusters": 20,
+      "noise_ratio": 0.0,
+      "temporal_coherence": 0.5129688725038575
+    },
+    "scibert_hierarchical": {
+      "silhouette_score": 0.038092684000730515,
+      "calinski_harabasz_score": 50.454872131347656,
+      "num_clusters": 20,
+      "noise_ratio": 0.0,
+      "temporal_coherence": 0.5187052801595949
+    }
+  },
+  "shuffled": [
+    {
+      "tfidf_kmeans": {
+        "silhouette_score": -0.07006309181451797,
+        "calinski_harabasz_score": 11.660346984863281,
+        "num_clusters": 20,
+        "noise_ratio": 0.0,
+        "temporal_coherence": 0.524583405528824
+      },
+      "scibert_kmeans": {
+        "silhouette_score": 0.05562807247042656,
+        "calinski_harabasz_score": 54.02460861206055,
+        "num_clusters": 20,
+        "noise_ratio": 0.0,
+        "temporal_coherence": 0.5129688725038575
+      },
+      "scibert_hierarchical": {
+        "silhouette_score": 0.038092684000730515,
+        "calinski_harabasz_score": 50.454872131347656,
+        "num_clusters": 20,
+        "noise_ratio": 0.0,
+        "temporal_coherence": 0.5187052801595949
+      }
+    },
+    {
+      "tfidf_kmeans": {
+        "silhouette_score": -0.07006309181451797,
+        "calinski_harabasz_score": 11.660346984863281,
+        "num_clusters": 20,
+        "noise_ratio": 0.0,
+        "temporal_coherence": 0.524583405528824
+      },
+      "scibert_kmeans": {
+        "silhouette_score": 0.05562807247042656,
+        "calinski_harabasz_score": 54.02460861206055,
+        "num_clusters": 20,
+        "noise_ratio": 0.0,
+        "temporal_coherence": 0.5129688725038575
+      },
+      "scibert_hierarchical": {
+        "silhouette_score": 0.038092684000730515,
+        "calinski_harabasz_score": 50.454872131347656,
+        "num_clusters": 20,
+        "noise_ratio": 0.0,
+        "temporal_coherence": 0.5187052801595949
+      }
+    },
+    {
+      "tfidf_kmeans": {
+        "silhouette_score": -0.07006309181451797,
+        "calinski_harabasz_score": 11.660346984863281,
+        "num_clusters": 20,
+        "noise_ratio": 0.0,
+        "temporal_coherence": 0.524583405528824
+      },
+      "scibert_kmeans": {
+        "silhouette_score": 0.05562807247042656,
+        "calinski_harabasz_score": 54.02460861206055,
+        "num_clusters": 20,
+        "noise_ratio": 0.0,
+        "temporal_coherence": 0.5129688725038575
+      },
+      "scibert_hierarchical": {
+        "silhouette_score": 0.038092684000730515,
+        "calinski_harabasz_score": 50.454872131347656,
+        "num_clusters": 20,
+        "noise_ratio": 0.0,
+        "temporal_coherence": 0.5187052801595949
+      }
+    },
+    {
+      "tfidf_kmeans": {
+        "silhouette_score": -0.07006309181451797,
+        "calinski_harabasz_score": 11.660346984863281,
+        "num_clusters": 20,
+        "noise_ratio": 0.0,
+        "temporal_coherence": 0.524583405528824
+      },
+      "scibert_kmeans": {
+        "silhouette_score": 0.05562807247042656,
+        "calinski_harabasz_score": 54.02460861206055,
+        "num_clusters": 20,
+        "noise_ratio": 0.0,
+        "temporal_coherence": 0.5129688725038575
+      },
+      "scibert_hierarchical": {
+        "silhouette_score": 0.038092684000730515,
+        "calinski_harabasz_score": 50.454872131347656,
+        "num_clusters": 20,
+        "noise_ratio": 0.0,
+        "temporal_coherence": 0.5187052801595949
+      }
+    },
+    {
+      "tfidf_kmeans": {
+        "silhouette_score": -0.07006309181451797,
+        "calinski_harabasz_score": 11.660346984863281,
+        "num_clusters": 20,
+        "noise_ratio": 0.0,
+        "temporal_coherence": 0.524583405528824
+      },
+      "scibert_kmeans": {
+        "silhouette_score": 0.05562807247042656,
+        "calinski_harabasz_score": 54.02460861206055,
+        "num_clusters": 20,
+        "noise_ratio": 0.0,
+        "temporal_coherence": 0.5129688725038575
+      },
+      "scibert_hierarchical": {
+        "silhouette_score": 0.038092684000730515,
+        "calinski_harabasz_score": 50.454872131347656,
+        "num_clusters": 20,
+        "noise_ratio": 0.0,
+        "temporal_coherence": 0.5187052801595949
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Temporal shuffling control experiment. Shuffling training years destroys temporal structure, causing performance drops (especially for GNN which relies on temporal edges).}
+\label{tab:shuffling}
+\begin{tabular}{llccc}
+\toprule
+Method & Setting & Silhouette $\uparrow$ & C-H Score $\uparrow$ & Temporal $\uparrow$ \\
+\midrule
+TF-IDF + K-Means & Normal & -0.070 & 11.7 & 0.525 \\
+ & Shuffled & -0.070$_{\pm0.000}$ & 11.7$_{\pm0.0}$ & 0.525$_{\pm0.000}$ \\
+ & $\rightarrow$ Drop & -0.0\% & - & \textbf{0.0\%} \\
+\midrule
+SciBERT + K-Means & Normal & 0.056 & 54.0 & 0.513 \\
+ & Shuffled & 0.056$_{\pm0.000}$ & 54.0$_{\pm0.0}$ & 0.513$_{\pm0.000}$ \\
+ & $\rightarrow$ Drop & 0.0\% & - & \textbf{0.0\%} \\
+\midrule
+\bottomrule
+\end{tabular}
+\end{table}
