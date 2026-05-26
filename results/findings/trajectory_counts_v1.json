@@ -1,0 +1,41 @@
+{
+  "strict": {
+    "total_trajectories_3plus": 41496585,
+    "total_trajectories_length_3_to_5": 41496585,
+    "by_length": {
+      "3": {
+        "count": 1276679,
+        "method": "exact"
+      },
+      "4": {
+        "count": 5622170,
+        "method": "exact"
+      },
+      "5": {
+        "count": 34597736,
+        "method": "exact"
+      }
+    },
+    "mean_length_capped": 4,
+    "median_length_capped": 4.0,
+    "coverage": {
+      "papers_in_trajectory": 22855,
+      "papers_total": 24879,
+      "coverage_pct": 91.86
+    },
+    "longest_path": {
+      "length": 7,
+      "path_node_ids": [
+        4375,
+        5574,
+        7669,
+        11164,
+        12457,
+        18155,
+        24216
+      ]
+    },
+    "edges_used": 464389,
+    "source_nodes": 19892
+  }
+}

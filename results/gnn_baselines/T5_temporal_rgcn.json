@@ -1,0 +1,33 @@
+{
+  "model": "tier5_temporal_rgcn",
+  "architecture": "Signed temporal R-GCN + skip + per-relation time decay",
+  "n_papers": 24879,
+  "n_parameters": 1143001,
+  "best_epoch": 48,
+  "best_val_auc": 0.5399,
+  "final_alpha": 0.5002,
+  "learned_decay_rates": {
+    "direct_extension": 0.4996,
+    "future_realized": 0.1001,
+    "limit_addressed": 0.3,
+    "causal_extension": 0.15,
+    "perf_succ": 0.4,
+    "method_re": 0.3,
+    "temporal_semantic": 0.3997,
+    "related_work": 0.5,
+    "dispute": 0.1999
+  },
+  "embedding_dim": 128,
+  "silhouette": 0.274,
+  "calinski_harabasz": 4087.2,
+  "temporal_coherence_rho": 0.1497,
+  "link_prediction_auc_hard": 0.5926,
+  "link_prediction_ap_hard": 0.5749,
+  "link_prediction_auc_random": 0.7684,
+  "link_prediction_ap_random": 0.7312,
+  "temporal_shuffling": {
+    "auc_normal": 0.7684,
+    "auc_shuffled": 0.5866,
+    "drop_auc": 0.1817
+  }
+}

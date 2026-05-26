@@ -1,0 +1,24 @@
+{
+  "model": "tier6_hetero_multitask",
+  "architecture": "Hetero (paper+topic) multi-task R-GCN + skip + temporal + signed",
+  "n_papers": 24879,
+  "n_topics": 30,
+  "n_parameters": 2333312,
+  "best_epoch": 50,
+  "best_val_auc": 0.5338,
+  "final_alpha": 0.5002,
+  "embedding_dim": 128,
+  "silhouette": 0.2719,
+  "calinski_harabasz": 4218.2,
+  "temporal_coherence_rho": 0.1504,
+  "link_prediction_auc_hard": 0.5872,
+  "link_prediction_ap_hard": 0.5728,
+  "link_prediction_auc_random": 0.7647,
+  "link_prediction_ap_random": 0.7312,
+  "edge_type_classification_accuracy": 0.6918,
+  "temporal_shuffling": {
+    "auc_normal": 0.7647,
+    "auc_shuffled": 0.5915,
+    "drop_auc": 0.1731
+  }
+}

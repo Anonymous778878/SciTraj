@@ -1,0 +1,9 @@
+{
+  "model": "tier24_lightgbm",
+  "architecture": "LightGBM on T22 expanded pair features",
+  "n_features": 63,
+  "best_val_auc": 0.8251,
+  "link_prediction_auc_hard": 0.907,
+  "link_prediction_ap_hard": 0.8887,
+  "n_estimators_used": 529
+}

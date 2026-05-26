@@ -1,0 +1,104 @@
+{
+  "task": "T22 feature-group ablation",
+  "seeds": [
+    42,
+    17,
+    2024,
+    511,
+    7
+  ],
+  "baseline_full": {
+    "auc_mean": 0.9137,
+    "auc_std": 0.0051,
+    "ap_mean": 0.8945,
+    "ap_std": 0.006
+  },
+  "groups": {
+    "A_per_rel_cosines": {
+      "group_id": "A_per_rel_cosines",
+      "group_name": "Per-relation cosine similarities",
+      "category": "typed-relation",
+      "n_dims_dropped": 9,
+      "auc_mean": 0.8977,
+      "auc_std": 0.0097,
+      "ap_mean": 0.8818,
+      "ap_std": 0.0084,
+      "delta_auc_vs_full": -0.0161,
+      "delta_ap_vs_full": -0.0127
+    },
+    "B_per_rel_degrees": {
+      "group_id": "B_per_rel_degrees",
+      "group_name": "Per-relation in/out degrees",
+      "category": "structural",
+      "n_dims_dropped": 36,
+      "auc_mean": 0.8725,
+      "auc_std": 0.0065,
+      "ap_mean": 0.8342,
+      "ap_std": 0.0094,
+      "delta_auc_vs_full": -0.0412,
+      "delta_ap_vs_full": -0.0603
+    },
+    "C_common_neighbour": {
+      "group_id": "C_common_neighbour",
+      "group_name": "Common-neighbour features",
+      "category": "structural",
+      "n_dims_dropped": 6,
+      "auc_mean": 0.9012,
+      "auc_std": 0.0066,
+      "ap_mean": 0.8776,
+      "ap_std": 0.0085,
+      "delta_auc_vs_full": -0.0125,
+      "delta_ap_vs_full": -0.017
+    },
+    "D_topic_match": {
+      "group_id": "D_topic_match",
+      "group_name": "Topic match flags",
+      "category": "topic",
+      "n_dims_dropped": 2,
+      "auc_mean": 0.9091,
+      "auc_std": 0.0094,
+      "ap_mean": 0.8868,
+      "ap_std": 0.012,
+      "delta_auc_vs_full": -0.0046,
+      "delta_ap_vs_full": -0.0077
+    },
+    "E_year_gap": {
+      "group_id": "E_year_gap",
+      "group_name": "Year-gap basis (5-dim)",
+      "category": "temporal",
+      "n_dims_dropped": 5,
+      "auc_mean": 0.8988,
+      "auc_std": 0.0091,
+      "ap_mean": 0.8756,
+      "ap_std": 0.0119,
+      "delta_auc_vs_full": -0.0149,
+      "delta_ap_vs_full": -0.019
+    },
+    "F_back_bidirec": {
+      "group_id": "F_back_bidirec",
+      "group_name": "Back-edge / bidirectional indicators",
+      "category": "structural",
+      "n_dims_dropped": 2,
+      "auc_mean": 0.9137,
+      "auc_std": 0.0051,
+      "ap_mean": 0.8945,
+      "ap_std": 0.006,
+      "delta_auc_vs_full": 0.0,
+      "delta_ap_vs_full": 0.0
+    },
+    "G_pop_ratios": {
+      "group_id": "G_pop_ratios",
+      "group_name": "Source-target popularity ratios",
+      "category": "structural",
+      "n_dims_dropped": 3,
+      "auc_mean": 0.9116,
+      "auc_std": 0.0064,
+      "ap_mean": 0.8906,
+      "ap_std": 0.0073,
+      "delta_auc_vs_full": -0.0021,
+      "delta_ap_vs_full": -0.004
+    }
+  },
+  "n_test_positive": 69753,
+  "n_test_negative": 69753
+}

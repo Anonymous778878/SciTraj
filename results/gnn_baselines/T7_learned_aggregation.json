@@ -1,0 +1,22 @@
+{
+  "model": "tier7_learned_aggregation",
+  "architecture": "Learned per-relation aggregation, 768-d output",
+  "n_papers": 24879,
+  "n_parameters": 10,
+  "best_val_auc": 0.6204,
+  "link_prediction_auc_hard": 0.8641,
+  "link_prediction_ap_hard": 0.8459,
+  "learned_alpha": 0.09456202387809753,
+  "learned_betas": {
+    "direct_extension": 0.09457962214946747,
+    "future_realized": 0.10450626164674759,
+    "limit_addressed": 0.10450559109449387,
+    "causal_extension": 0.1045069471001625,
+    "performance_successor": 0.09942249208688736,
+    "method_reuse": 0.09942249208688736,
+    "temporal_semantic": 0.1045064851641655,
+    "related_work": 0.09942249208688736,
+    "dispute": 0.09456555545330048
+  },
+  "embedding_dim": 768
+}

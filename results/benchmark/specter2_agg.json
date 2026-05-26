@@ -1,0 +1,16 @@
+{
+  "model": "tier2_edge_aggregation",
+  "alpha": 0.5,
+  "n_papers": 24879,
+  "n_papers_with_neighbors": 22348,
+  "silhouette": 0.1134,
+  "calinski_harabasz": 548.0,
+  "temporal_coherence_rho": 0.3554,
+  "link_prediction_auc": 0.9953,
+  "link_prediction_ap": 0.9953,
+  "temporal_shuffling": {
+    "auc_normal": 0.9953,
+    "auc_shuffled": 0.5845,
+    "drop_auc": 0.4108
+  }
+}

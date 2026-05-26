@@ -1,0 +1,24 @@
+{
+  "model": "tier3_graphsage_v4",
+  "architecture": "GraphSAGE + skip + edge-type bias",
+  "n_papers": 24879,
+  "n_relations": 9,
+  "n_parameters": 1142983,
+  "best_epoch": 50,
+  "best_val_auc": 0.5439,
+  "final_alpha": 0.5002,
+  "embedding_dim": 128,
+  "silhouette": 0.2616,
+  "calinski_harabasz": 3982.5,
+  "temporal_coherence_rho": 0.1469,
+  "link_prediction_auc_hard": 0.5947,
+  "link_prediction_ap_hard": 0.5764,
+  "link_prediction_auc_random": 0.7704,
+  "link_prediction_ap_random": 0.7351,
+  "temporal_shuffling": {
+    "auc_normal": 0.7704,
+    "auc_shuffled": 0.5819,
+    "drop_auc": 0.1885
+  },
+  "negatives_source": "phase5_candidate_pool"
+}

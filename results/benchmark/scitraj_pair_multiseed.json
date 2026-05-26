@@ -1,0 +1,68 @@
+{
+  "task": "T22 multi-seed + paired-bootstrap test vs T2",
+  "seeds": [
+    42,
+    17,
+    2024,
+    511,
+    7
+  ],
+  "n_test_positive": 69753,
+  "n_test_negative": 69753,
+  "t22_per_seed": [
+    {
+      "seed": 42,
+      "test_auc": 0.923,
+      "test_ap": 0.9043,
+      "best_val_auc": 0.8253,
+      "wall_seconds": 39.6
+    },
+    {
+      "seed": 17,
+      "test_auc": 0.9132,
+      "test_ap": 0.8954,
+      "best_val_auc": 0.8233,
+      "wall_seconds": 39.1
+    },
+    {
+      "seed": 2024,
+      "test_auc": 0.9075,
+      "test_ap": 0.8856,
+      "best_val_auc": 0.8226,
+      "wall_seconds": 39.2
+    },
+    {
+      "seed": 511,
+      "test_auc": 0.9118,
+      "test_ap": 0.8931,
+      "best_val_auc": 0.8222,
+      "wall_seconds": 39.2
+    },
+    {
+      "seed": 7,
+      "test_auc": 0.913,
+      "test_ap": 0.8943,
+      "best_val_auc": 0.824,
+      "wall_seconds": 39.3
+    }
+  ],
+  "t22_summary": {
+    "auc_mean": 0.9137,
+    "auc_std": 0.0051,
+    "ap_mean": 0.8945,
+    "ap_std": 0.006,
+    "auc_min": 0.9075,
+    "auc_max": 0.923
+  },
+  "t2_baseline": {
+    "auc": 0.884,
+    "ap": 0.8592
+  },
+  "paired_bootstrap_t22_vs_t2": {
+    "obs_diff": 0.034631,
+    "ci_low_95": 0.032769,
+    "ci_high_95": 0.036491,
+    "p_value_one_sided": 0.0,
+    "n_bootstrap": 10000
+  }
+}

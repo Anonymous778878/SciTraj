@@ -1,0 +1,18 @@
+{
+  "T22": {
+    "auc_real": 0.918,
+    "auc_shuffled": 0.6504,
+    "auc_drop": 0.2676,
+    "auc_drop_relative": 0.2915,
+    "ap_real": 0.8964,
+    "ap_shuffled": 0.7245
+  },
+  "T24": {
+    "auc_real": 0.907,
+    "auc_shuffled": 0.8929,
+    "auc_drop": 0.0141,
+    "auc_drop_relative": 0.0155,
+    "ap_real": 0.8887,
+    "ap_shuffled": 0.876
+  }
+}

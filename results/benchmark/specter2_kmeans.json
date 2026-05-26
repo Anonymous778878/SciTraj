@@ -1,0 +1,18 @@
+{
+  "model": "tier1_specter2_kmeans",
+  "embedding_dim": 768,
+  "n_papers": 24879,
+  "silhouette": 0.0813,
+  "calinski_harabasz": 386.9,
+  "temporal_coherence_rho": 0.3407,
+  "link_prediction_auc": 0.9957,
+  "link_prediction_ap": 0.9952,
+  "temporal_shuffling": {
+    "auc_normal": 0.9957,
+    "auc_shuffled": 0.5824,
+    "drop_auc": 0.4132
+  },
+  "n_train_edges": 133835,
+  "n_val_edges": 134055,
+  "n_test_edges": 69753
+}

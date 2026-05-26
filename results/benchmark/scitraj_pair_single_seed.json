@@ -1,0 +1,9 @@
+{
+  "model": "tier22_pair_mlp_expanded",
+  "architecture": "Pair-MLP with ~60 expanded structural features",
+  "n_extra_features": 63,
+  "n_parameters": 983553,
+  "best_val_auc": 0.8227,
+  "link_prediction_auc_hard": 0.918,
+  "link_prediction_ap_hard": 0.8964
+}

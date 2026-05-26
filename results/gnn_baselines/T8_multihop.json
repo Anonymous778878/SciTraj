@@ -1,0 +1,11 @@
+{
+  "model": "tier8_multihop",
+  "architecture": "Multi-hop edge aggregation, learned hop weights, 768-d",
+  "n_papers": 24879,
+  "best_val_auc": 0.6159,
+  "link_prediction_auc_hard": 0.866,
+  "link_prediction_ap_hard": 0.8502,
+  "learned_a": 0.2618173062801361,
+  "learned_b1": 0.4765557646751404,
+  "learned_b2": 0.2616269588470459
+}

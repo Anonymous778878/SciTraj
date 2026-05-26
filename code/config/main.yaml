@@ -1,0 +1,194 @@
+corpus:
+  acl_target: 15000
+  test_years:
+  - 2023
+  - 2024
+  train_years:
+  - 2010
+  - 2020
+  val_years:
+  - 2021
+  - 2022
+  year_max: 2024
+  year_min: 2010
+embeddings:
+  batch_size: 32
+  device: auto
+  embedding_dim: 768
+  max_seq_length: 512
+  model_name: allenai/specter2_base
+  normalize: true
+  views:
+  - abstract
+  - signal
+  - contrib
+  - limit
+  - future
+  - dispute
+  - causal
+  - caption
+extraction_patterns:
+  causal:
+  - \bwhich\s+(allows|enables|leads\s+to|results\s+in|causes)
+  - \bbecause\s+
+  - \bthis\s+(explains|causes|results\s+in)
+  - \benabling\b
+  - \bthereby\b
+  - \bas\s+a\s+result,?\b
+  - \bdue\s+to\s+
+  contribution:
+  - we\s+propose\b
+  - we\s+introduce\b
+  - we\s+present\b
+  - we\s+develop\b
+  - we\s+demonstrate\b
+  - we\s+show\s+that\b
+  - this\s+paper\s+(proposes|presents|introduces|describes)
+  - our\s+(main\s+)?contribution(s)?\b
+  - our\s+key\s+contribution
+  - in\s+this\s+(paper|work),?\s+we\b
+  - the\s+main\s+contribution
+  dispute:
+  - contrary\s+to\s+(prior|previous|existing|\w+\s+et\s+al)
+  - in\s+contrast\s+to\s+(prior|previous|existing|\w+\s+et\s+al)
+  - unlike\s+(prior|previous|existing|\w+\s+et\s+al)
+  - we\s+challenge\s+(the|this|that)
+  - we\s+(revisit|refute|dispute)\s+
+  - we\s+show\s+that\s+\w+.{0,40}\s+(does\s+not\s+hold|is\s+(incorrect|wrong|flawed))
+  - previous\s+(work|methods?|approaches?)\s+(fail|ignore|overlook|incorrectly)
+  - despite\s+claims\s+
+  - contradicts?\s+
+  future_direction:
+  - future\s+work\s+(should|could|will|may|might|include|involve|focus|aim)
+  - in\s+future\s+work,?\s+we
+  - future\s+(direction|research)\s+(include|involve|could)
+  - we\s+plan\s+to
+  - we\s+intend\s+to
+  - an?\s+(interesting|promising|natural|important)\s+(direction|extension)
+  - it\s+would\s+be\s+(interesting|valuable|useful)\s+to
+  - remains?\s+an?\s+open\s+(question|problem|challenge)
+  - could\s+be\s+(extended|applied|improved)\s+to
+  - next\s+steps?\s+(include|involve)
+  limitation:
+  - \b(one|a|the|another|main|key)?\s*limitation(s)?\s+(of|is|are|include)
+  - \b(weakness(es)?|drawback(s)?|shortcoming(s)?)\s+(of|is|are|include)
+  - our\s+(approach|method|model|work)\s+(does\s+not|cannot|fails?\s+to|is\s+limited\s+to)
+  - \bunfortunately,?\b
+  - we\s+acknowledge\s+that
+  - it\s+should\s+be\s+noted\s+that
+  - \bfails?\s+(to|when|on|at)\b
+  - \b(degrades?|struggles?)\s+(on|with|when)\b
+  - \bcurrent(ly)?\s+limited\s+to\b
+  - we\s+focus\s+only\s+on
+  - we\s+do\s+not\s+address
+  - \blimitation(s)?\s+of\s+(our|this|the)
+  - \b(a|one)\s+key\s+(limitation|weakness|challenge)
+  - \bdoes\s+not\s+(generalize|handle|work|scale|guarantee|consider)
+  - \b(currently|still)\s+(limited|unable|cannot)
+  - \bopen\s+(problem|challenge|question)\b
+  - \bleave(s)?\s+.{1,30}\s+to\s+future\s+work
+  - \bremains?\s+(challenging|difficult|unclear)
+  - \bnot\s+(yet|fully)\s+(capable|able|explored)
+  uncertainty:
+    high:
+    - it remains unclear
+    - it is an open question
+    - remains to be
+    - we speculate
+    low:
+    - may
+    - might
+    - could
+    - possibly
+    - perhaps
+    medium:
+    - we believe
+    - we conjecture
+    - preliminary
+    - tentatively
+    - appears to
+filtering:
+  acl_keep_ratio: 0.26303
+  min_abstract_chars: 100
+  min_alpha: 50
+  min_section_total_chars: 0
+  min_words: 10
+  weight_abstract_quality: 10
+  weight_contribution_explicit: 15
+  weight_future_presence: 20
+  weight_limitation_presence: 20
+  weight_section_richness: 20
+  weight_year: 15
+input_files:
+  raw_dir: data/raw
+  venues:
+    ACL:
+    - acl_57028.json.json
+    CVPR:
+    - cv_10k.json
+    NeurIPS:
+    - neurips_v2.json
+paths:
+  embeddings_dir: data/embeddings
+  filtered_dir: data/filtered
+  graph_dir: data/graph
+  metrics_dir: outputs/metrics
+  models_dir: models
+  retrieval_dir: data/retrieval
+  signals_dir: data/signals
+  splits_dir: data/splits
+  standardized_dir: data/standardized
+  validated_dir: data/validated
+project:
+  name: scitraj_v2
+  run_mode: full
+  seed: 42
+retrieval:
+  index_type: flat_ip
+  max_temporal_gap_years: 10
+  min_abstract_similarity: 0.55
+  top_k: 50
+signals:
+  max_causal: 5
+  max_contributions: 5
+  max_disputes: 3
+  max_future: 4
+  max_limitations: 4
+  max_quant_claims: 8
+  max_signal_chars: 500
+  min_signal_chars: 20
+validation:
+  n_papers_to_sample: 30
+  per_venue: 10
+  precision_targets:
+    causal: 0.65
+    contribution: 0.8
+    dispute: 0.6
+    future_direction: 0.75
+    limitation: 0.7
+    quant_claim: 0.9
+graph:
+  n_topics: 30
+  topic_min_cluster_size: 20
+  topic_similarity_threshold: 0.3
+  thresh_direct_extension: 0.92
+  thresh_future_realized: 0.7
+  thresh_limit_addressed: 0.7
+  thresh_causal_extension: 0.72
+  thresh_temporal_semantic: 0.7
+  thresh_related_work: 0.6
+  max_out_edges_per_paper: 20
+  mmr_lambda: 0.7
+  author_min_overlap: 1
+  author_min_similarity: 0.6
+  flag_cross_venue: true
+  temporal_decay:
+    direct_extension: 0.5
+    future_realized: 0.1
+    limit_addressed: 0.3
+    causal_extension: 0.15
+    temporal_semantic: 0.4
+    related_work: 0.5
+    method_reuse: 0.3
+    performance_successor: 0.4
+    dispute: 0.2

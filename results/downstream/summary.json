@@ -1,0 +1,134 @@
+{
+  "tasks": {
+    "A_citation_augmentation": {
+      "n_queries": 5,
+      "baseline_specter2_only": {
+        "recall_at_10": 0.9303030303030304,
+        "recall_at_20": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "t22": {
+        "recall_at_10": 0.5994949494949495,
+        "recall_at_20": 0.95,
+        "mrr": 0.49000000000000005,
+        "ndcg_at_10": 0.5394913606771105
+      },
+      "lift": {
+        "mean_recall_at_10": {
+          "baseline": 0.9303030303030304,
+          "t22": 0.5994949494949495,
+          "absolute_delta": -0.3308080808080809,
+          "relative_delta": -0.35559174809989147
+        },
+        "mean_mrr": {
+          "baseline": 1.0,
+          "t22": 0.49000000000000005,
+          "absolute_delta": -0.51,
+          "relative_delta": -0.51
+        },
+        "mean_recall_at_20": {
+          "baseline": 1.0,
+          "t22": 0.95,
+          "absolute_delta": -0.050000000000000044,
+          "relative_delta": -0.050000000000000044
+        },
+        "mean_ndcg_at_10": {
+          "baseline": 1.0,
+          "t22": 0.5394913606771105,
+          "absolute_delta": -0.46050863932288955,
+          "relative_delta": -0.46050863932288955
+        }
+      }
+    },
+    "B_future_citation_prediction": {
+      "test_years": [
+        "2021",
+        "2022",
+        "2023",
+        "2024"
+      ],
+      "per_year": {
+        "2021": {
+          "specter2_baseline_auc": 0.25376141689744347,
+          "t22_retrained_auc": 0.8904181111560401,
+          "specter2_baseline_ap": 0.36126211282409687,
+          "t22_retrained_ap": 0.8996363682873847,
+          "delta_auc": 0.6366566942585966,
+          "n_test_edges": 14898
+        },
+        "2022": {
+          "specter2_baseline_auc": 0.23636689105892522,
+          "t22_retrained_auc": 0.9416556008296676,
+          "specter2_baseline_ap": 0.3533087456701059,
+          "t22_retrained_ap": 0.9471475949486649,
+          "delta_auc": 0.7052887097707423,
+          "n_test_edges": 29493
+        },
+        "2023": {
+          "specter2_baseline_auc": 0.21261441164569017,
+          "t22_retrained_auc": 0.9263942000630198,
+          "specter2_baseline_ap": 0.34576149634942543,
+          "t22_retrained_ap": 0.931348959861991,
+          "delta_auc": 0.7137797884173296,
+          "n_test_edges": 86551
+        },
+        "2024": {
+          "specter2_baseline_auc": 0.18196185180577618,
+          "t22_retrained_auc": 0.8988837852680123,
+          "specter2_baseline_ap": 0.3373036363353736,
+          "t22_retrained_ap": 0.9149343565182052,
+          "delta_auc": 0.7169219334622361,
+          "n_test_edges": 124102
+        }
+      }
+    },
+    "C_typed_relation_classification": {
+      "n_classes": 9,
+      "n_train": 133835,
+      "n_test": 69753,
+      "random_macro_f1": 0.16437335358535599,
+      "specter2_macro_f1": 0.1932452178036794,
+      "t22_macro_f1": 0.9477596992517769,
+      "t22_per_class": {
+        "direct_extension": {
+          "precision": 0.8767556179775281,
+          "recall": 0.9397817086940158,
+          "f1": 0.9071752951861943,
+          "support": 2657
+        },
+        "future_realized": {
+          "precision": 0.9995166747220879,
+          "recall": 0.9967866323907455,
+          "f1": 0.9981497868232644,
+          "support": 6224
+        },
+        "limit_addressed": {
+          "precision": 1.0,
+          "recall": 0.994026284348865,
+          "f1": 0.9970041941282205,
+          "support": 8370
+        },
+        "causal_extension": {
+          "precision": 0.9998441153546376,
+          "recall": 0.9909945702555952,
+          "f1": 0.9953996740973939,
+          "support": 45306
+        },
+        "temporal_semantic": {
+          "precision": 0.9570989153310668,
+          "recall": 0.9469806182924876,
+          "f1": 0.952012882447665,
+          "support": 6243
+        },
+        "dispute": {
+          "precision": 0.7260802469135802,
+          "recall": 0.9874081846799581,
+          "f1": 0.8368163628279235,
+          "support": 953
+        }
+      },
+      "lift_macro_f1": 0.7545144814480975
+    }
+  }
+}
